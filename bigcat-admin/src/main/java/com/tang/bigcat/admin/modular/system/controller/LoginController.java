@@ -46,5 +46,17 @@ public class LoginController {
     	
     	return "";
     }
+    
+    /**
+     * -eclipse
+     *
+     */
+    @RequestMapping("/sa/{id}")
+    public String sa1(@PathVariable String id){
+
+        System.out.println("测试:"+id);
+
+        return "";
+    }
 
 }
