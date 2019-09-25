@@ -13,7 +13,7 @@ import com.tang.bigcat.service.AppService;
 import java.util.List;
 
 /**
- * 登录控制器
+ * 登录控制器eclipse
  *
  * @author cjtang
  * @Date 2019-9-3
@@ -33,30 +33,6 @@ public class LoginController {
     	model.addAttribute("app", app);
     	return "/login.jsp";
      
-    }
-    
-    /**
-     * 测试github冲突修改1
-     * 
-     */
-    @RequestMapping("/sa/{id}")
-    public String sa(@PathVariable String id){
-    	
-    	System.out.println("测试:"+id);
-    	
-    	return "";
-    }
-    
-    /**
-     * -eclipse
-     *
-     */
-    @RequestMapping("/sa/{id}")
-    public String sa1(@PathVariable String id){
-
-        System.out.println("测试:"+id);
-
-        return "";
     }
 
 }
