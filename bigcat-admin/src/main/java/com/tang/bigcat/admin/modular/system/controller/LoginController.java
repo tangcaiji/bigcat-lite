@@ -35,16 +35,4 @@ public class LoginController {
      
     }
 
-    /**
-     * 测试github冲突修改1-idea
-     *
-     */
-    @RequestMapping("/sa/{id}")
-    public String sa(@PathVariable String id){
-
-        System.out.println("测试:"+id);
-
-        return "";
-    }
-
 }
