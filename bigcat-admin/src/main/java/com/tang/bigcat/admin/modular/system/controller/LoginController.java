@@ -25,7 +25,7 @@ public class LoginController {
     AppService appService;
 
     /**
-     * 点击登录执行的动作
+     * 点击登录执行的动作1
      */
     @RequestMapping(value = "/login")
     public String loginVali(Model model) {
