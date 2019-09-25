@@ -13,7 +13,7 @@ import com.tang.bigcat.service.AppService;
 import java.util.List;
 
 /**
- * 登录控制器eclipse
+ * 登录控制器
  *
  * @author cjtang
  * @Date 2019-9-3
