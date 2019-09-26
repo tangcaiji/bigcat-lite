@@ -13,11 +13,10 @@ import com.tang.bigcat.service.AppService;
 import java.util.List;
 
 /**
- * 登录控制器idea
- * 登录控制器eclipse1
+ * 登录控制器
  *
  * @author cjtang
- * @Date 2019-9-3
+ * @Date 2019-9-26
  */
 @Controller
 public class LoginController {
@@ -26,7 +25,7 @@ public class LoginController {
     AppService appService;
 
     /**
-     * 点击登录执行的动作1
+     * 登录
      */
     @RequestMapping(value = "/login")
     public String loginVali(Model model) {
