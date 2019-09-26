@@ -15,29 +15,29 @@
     <!-- 注解扫描 -->
     <context:component-scan base-package="com.tang.bigcat.service,com.tang.bigcat.dao"></context:component-scan>
     <!-- 加载属性文件 -->
-   <!--  <context:property-placeholder location="classpath:db.properties"/> -->
+     <context:property-placeholder location="classpath:db.properties"/>
     <!-- 数据源 -->
-  <!--   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
     	<property name="driverClassName" value="${jdbc.driver}"></property>
     	<property name="url" value="${jdbc.url}"></property>
     	<property name="username" value="${jdbc.username}"></property>
     	<property name="password" value="${jdbc.password}"></property>
     </bean>
-    SqlSessionFactory
+    <!--SqlSessionFactory-->
     <bean id="factory" class="org.mybatis.spring.SqlSessionFactoryBean">
     	<property name="dataSource" ref="dataSource"></property>
-    	<property name="typeAliasesPackage" value="com.bjsxt.pojo"></property>
+    	<property name="typeAliasesPackage" value="com.tang.bigcat.entity"></property>
     </bean>
-    扫描器
+   <!-- 扫描器-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
     	<property name="basePackage" value="com.bjsxt.mapper"></property>
     	<property name="sqlSessionFactoryBeanName" value="factory"></property>
     </bean>
-    事务管理器
+   <!-- 事务管理器-->
     <bean id="txManage" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     	<property name="dataSource" ref="dataSource"></property>
     </bean>
-    声明式事务
+    <!--声明式事务-->
     <tx:advice id="txAdvice" transaction-manager="txManage">
     	<tx:attributes>
     		<tx:method name="ins*"/>
@@ -46,9 +46,9 @@
     		<tx:method name="*" read-only="true"/>
     	</tx:attributes>
     </tx:advice>
-    配置aop
+   <!-- 配置aop-->
     <aop:config>
-    	<aop:pointcut expression="execution(* com.bjsxt.service.impl.*.*(..))" id="mypoint"/>
+    	<aop:pointcut expression="execution(* com.tang.bigcat.service.impl.*.*(..))" id="mypoint"/>
     	<aop:advisor advice-ref="txAdvice" pointcut-ref="mypoint"/>
-    </aop:config> -->
+    </aop:config>
 </beans>
