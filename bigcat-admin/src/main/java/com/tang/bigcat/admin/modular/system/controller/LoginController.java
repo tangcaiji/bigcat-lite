@@ -22,6 +22,9 @@ import java.util.List;
 @Controller
 public class LoginController {
 
+    //测试idea+git冲突处理
+    private String name;
+
     @Autowired
     AppService appService;
 
