@@ -7,6 +7,7 @@
 <title>登陆</title>
 </head>
 <body>
-	登陆：<h1>${app }</h1>
+	登陆：<h1>id->${user.id }</h1>
+	      <h1>name->${user.name }</h1>
 </body>
 </html>

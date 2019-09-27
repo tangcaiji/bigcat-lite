@@ -13,7 +13,7 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd" default-autowire="byName">
     <!-- 注解扫描 -->
-    <context:component-scan base-package="com.tang.bigcat.service,com.tang.bigcat.dao"></context:component-scan>
+    <context:component-scan base-package="com.tang.bigcat.service.modular,com.tang.bigcat.dao"></context:component-scan>
     <!-- 加载属性文件 -->
      <context:property-placeholder location="classpath:db.properties"/>
     <!-- 数据源 -->
@@ -30,7 +30,7 @@
     </bean>
    <!-- 扫描器-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-    	<property name="basePackage" value="com.bjsxt.mapper"></property>
+    	<property name="basePackage" value="com.tang.bigcat.dao.modular.system"></property>
     	<property name="sqlSessionFactoryBeanName" value="factory"></property>
     </bean>
    <!-- 事务管理器-->
@@ -48,7 +48,7 @@
     </tx:advice>
    <!-- 配置aop-->
     <aop:config>
-    	<aop:pointcut expression="execution(* com.tang.bigcat.service.impl.*.*(..))" id="mypoint"/>
+    	<aop:pointcut expression="execution(* com.tang.bigcat.service.*.impl.*.*(..))" id="mypoint"/>
     	<aop:advisor advice-ref="txAdvice" pointcut-ref="mypoint"/>
     </aop:config>
 </beans>

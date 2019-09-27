@@ -1,6 +1,8 @@
 package com.tang.bigcat.admin.modular.system.controller;
 
 
+import com.tang.bigcat.entity.User;
+import com.tang.bigcat.service.modular.system.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,15 +27,15 @@ public class LoginController {
     private String name;
 
     @Autowired
-    AppService appService;
+    UserService userService;
 
     /**
      * 登录
      */
-    @RequestMapping(value = "/login")
-    public String loginVali(Model model) {
-    	String app=appService.app();
-    	model.addAttribute("app", app);
+    @RequestMapping(value = "/login/{ids}")
+    public String loginVali(@PathVariable String ids,Model model) {
+    	User user=userService.getUserById(ids);
+    	model.addAttribute("user", user);
     	return "/login.jsp";
      
     }
