@@ -15,7 +15,8 @@
     <!-- 注解扫描 -->
     <context:component-scan base-package="com.tang.bigcat.service.modular,com.tang.bigcat.dao"></context:component-scan>
     <!-- 加载属性文件 -->
-     <context:property-placeholder location="classpath:db.properties"/>
+    <context:property-placeholder location="classpath:db.properties"/>
+
     <!-- 数据源 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
     	<property name="driverClassName" value="${jdbc.driver}"></property>
