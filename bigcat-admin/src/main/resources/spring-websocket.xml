@@ -7,13 +7,13 @@
           http://www.springframework.org/schema/websocket
           http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd">
 
-    <bean id="websocket" class="com.tang.bigcat.admin.modular.system.interceptor.WebSocketHander"/>
+    <bean id="websocket" class="com.tang.bigcat.admin.modular.system.notice.WebSocketHander"/>
 
     <websocket:handlers>
         <websocket:mapping path="/echo" handler="websocket"/>
-      <!--  <websocket:handshake-interceptors>
-            <bean class="com.tang.bigcat.admin.modular.system.interceptor.HandshakeInterceptordemo"/>
-        </websocket:handshake-interceptors>-->
+       <websocket:handshake-interceptors>
+            <bean class="com.tang.bigcat.admin.modular.system.notice.HandshakeInterceptordemo"/>
+        </websocket:handshake-interceptors>
     </websocket:handlers>
 
 </beans>

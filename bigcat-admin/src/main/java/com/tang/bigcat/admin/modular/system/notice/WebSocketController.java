@@ -1,4 +1,4 @@
-package com.tang.bigcat.admin.modular.system.interceptor;
+package com.tang.bigcat.admin.modular.system.notice;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;

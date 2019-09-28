@@ -13,7 +13,9 @@
                 alert("您的浏览器支持 WebSocket!");
 
                 // 打开一个 web socket
-                var ws = new WebSocket("ws://localhost/echo");
+               // var ws = new WebSocket("ws://localhost/echo");
+                //eclipse:
+                var ws = new WebSocket("ws://localhost:8080/bigcat-admin/echo");
 
                 ws.onopen = function()
                 {
