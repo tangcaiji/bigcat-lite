@@ -1,6 +1,4 @@
-11122
-<<<<<<< HEAD
-2221
-=======
-222
->>>>>>> branch 'master' of https://github.com/tangcaiji/bigcat-lite.git
+1
+2
+3
+4
