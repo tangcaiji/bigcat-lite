@@ -1,6 +1,1 @@
-11122
-<<<<<<< HEAD
-2221
-=======
-222
->>>>>>> branch 'master' of https://github.com/tangcaiji/bigcat-lite.git
+8888888
